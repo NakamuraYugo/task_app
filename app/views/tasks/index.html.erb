@@ -32,7 +32,7 @@
         <td><%= task.updated_at.to_s(:datetime_jp) %></td>
         <td><%= link_to "確認", task %></td>
         <td><%= link_to "編集", [:edit, task] %></td>
-        <td><%= link_to "削除", task, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+        <td><%= link_to "削除", task, data: {turbo_method: :delete}, turbo_confirm: "本当に削除しますか？" %></td>
       </tr>
     <% end %>
   </tbody>
